@@ -1,0 +1,91 @@
+{% include header.html %} {% for author in site.data.authors %} {% if author.name == page.author_name %} {% assign author_name
+= author.name %} {% assign author_image = author.image %} {% assign author_title = author.title %} {% break %} {% endif %}
+{% endfor %}
+
+<div class="blogDetailBg">
+    {% include common_header.html %}
+    <div class="blog__detail--banner">
+        <div class="blog__detail--bannercontent">
+            <h5 class="commonHeight__heading">{{page.title |upcase }}</h5>
+            <p class="commonHeight__para details-italics ">{{page.blog_description | capitalize }}</p>
+        </div>
+    </div>
+</div>
+<div class="blog__detail--container-all">
+    <div class="row blog__detail--container">
+        <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 middleSection1__iconAlign">
+            <div class="middleSection1__profile1">
+                <img class="middleSection1__img1" src="/assets/img/blog/images.png" alt="blog-comma">
+                <br>
+                <img class="middleSection1__pimg" src="/assets/img/blog/sachin.png" alt="author-image">
+                <div class="middleSection1__profile">
+                    <div class="middleSection1__profileName">
+                        {{author_name | upcase}}
+                    </div>
+                    <div class="middleSection1__profileName1">
+                        {{author_title}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12 middleSection1__detail">
+            <div class=" middleSection1__algnn middleSection1__para">
+                {{page.blog_highlight}}
+                <hr class="middleSection1__hr1">
+            </div>
+            <div class=" middleSection1__media-link">
+                <div class=" middleSection1__iconAlgn ">
+                    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook"
+                        class="custom_share">
+                        <div class="middleSection1__img2-1 middleSection1__icondsply"></div>
+                        <h4 class="middleSection1__h4-1 middleSection1__icondsply">Facebook</h4>
+                    </a>
+                </div>
+                <div class=" middleSection1__iconAlgn ">
+                    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}"
+                        rel="nofollow" target="_blank" title="Share on Twitter" class="custom_share">
+                        <div class="middleSection1__img2-2 middleSection1__icondsply"></div>
+                        <h4 class="middleSection1__h4-2 middleSection1__icondsply">Twitter</h4>
+                    </a>
+                </div>
+                <div class="middleSection1__iconAlgn">
+                    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Google+"
+                        class="custom_share">
+                        <div class="middleSection1__img2-3 middleSection1__algn1 middleSection1__icondsply"></div>
+                        <h4 class="middleSection1__h4-3 middleSection1__icondsply">Google+</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="middleSection2">
+                {{ content }}
+                <div id="disqus_thread"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+<script>
+
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://littlebrahma-1.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+{% include common_footer.html %} {% include footer.html %}

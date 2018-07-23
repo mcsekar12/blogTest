@@ -1,0 +1,15 @@
+- name: sanjay
+  image: /assets/img/blog/sanjay_profile_dp.png
+  title: designer
+
+- name: jaison
+  image: /assets/img/blog/profile_1.png
+  title: designer
+
+- name: satish
+  image: /assets/img/blog/profile_1.png
+  title: designer
+  
+- name: shilpa
+  image: /assets/img/blog/profile_1.png
+  title: design lead

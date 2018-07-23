@@ -1,0 +1,36 @@
+{% for post in site.posts %} {% if post.blog_category %} {% capture tmp %}{{ tmp }}#{{ post.blog_category }}{% endcapture %} {% endif %} {% endfor %} {% assign allprojects = tmp | remove_first: '#' | split: '#' %} {% for category in allprojects %} {%
+unless tmp2 contains category %} {% capture tmp2 %}{{ tmp2 }}#{{ category | strip }}{% endcapture %} {% endunless %} {% endfor %} {% assign uniqueprojects = tmp2 | remove_first: '#' | split: '#' %}
+
+<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 selectSection">
+    <h5 class="selectSection__title">SELECT CATEGORY</h5>
+    <div class="selectSection__border"></div>
+    <div class="radioSection">
+
+        {% for category in uniqueprojects %}
+        <div class="selectInput">
+            <input id="r-option{{forloop.index}}" type="radio" name="field" value="{{radios.value}}" data-id="{{forloop.index}}" data-category="{{category}}" class="radio">
+            <label for="r-option{{forloop.index}}" class="branding"><span class="select__radio"><span></span></span><span class="select__title">{{category | upcase}}</span></label>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="col-xs-12 mobileDropDown">
+    <h5 class="mobileDropDown__title">SELECT CATEGORY</h5>
+    <div class="mobileDropDown__border"></div>
+
+    <div class="mobileDropDown__container">
+        <h1 id="dropdownTitle"></h1>
+        <i class="fa fa-angle-down" id="test" aria-hidden="true"></i>
+    </div>
+
+    <div class="mobileDropDown__menu">
+
+        <ul>
+            {% for category in uniqueprojects %}
+            <li data-category="{{category}}" id="mobileRadio{{forloop.index0}}" class="toHide">{{category | upcase}}</li>
+            {% endfor %}
+        </ul>
+
+    </div>
+</div>

@@ -1,0 +1,261 @@
+
+.hero {
+
+		.selectSection{
+		position: absolute;
+		top:80px;
+	}
+   .blog__date{
+    position: relative;
+    padding-left: 0px;
+    &--inside {
+
+    	position: absolute;
+    bottom: 12px;
+    width: 100%;
+	img{
+		height: 16px;
+    width: 16px;
+	}
+    }
+   }
+   .blog__pad-row {
+   	padding-bottom: 10px;
+   }
+	.blogBg {
+		background-color: #27AAE1;
+	}
+     .selectSection{
+		position: absolute;
+		top:80px;
+	}
+	.rightDiv{
+			position: relative; 
+		left: 33.3%;
+		 top: 0px;
+	}
+	.blog-row{
+		position:relative;
+	}
+		.blogWholeBG {
+			background-color: rgba(241, 242, 242, 0.30);
+			.blogDetail {
+				margin: 0 20px;
+				color: #5D5D5D;
+				&__title {
+					font-family: $ternary-titlefamily;
+					font-size: $primary-contentfont;
+					line-height: 20px;
+					padding: 12px 0 3px;
+					text-transform: uppercase;
+				}
+				&__border {
+					width: 40px;
+					border-bottom: 2px solid #5D5D5D;
+				}
+				&__para {
+					font-family: $primary-contentfamily;
+					font-size: $secondary-contentfont;
+					margin-bottom: 20px;
+					line-height: 20px;
+					letter-spacing: .01em;
+					height: 58px;
+				}
+			}
+			.authorSection {
+				padding: 0px 0 0;
+				&__title {
+					font-size:11px;
+					font-family: $ternary-titlefamily;
+					color: #5D5D5D;
+					text-transform: uppercase;
+				}
+				&__para {
+					font-size: 8px;
+					font-family: $primary-contentfamily;
+					margin: 4px 0;
+					color: #333;
+					text-transform: uppercase;
+				}
+				&__date {
+					font-size: $ternary-contentfont;
+					font-family: $secondary-titlefamily;
+					color: #808285;
+					    position: absolute;
+    left: 22px;
+    top: 3px;
+				}
+			}
+		}
+		.blogClock {
+			padding: 0 0 20px; 
+			text-align: right;
+			& img {
+				margin: 1px 5px 0;
+	    		width: 12px;
+	    		vertical-align: middle;
+			}
+		}
+		.blog__pad {
+				display: flex;
+				align-items: center;
+			}
+	.blog__pad-img {
+				padding:0 15px;
+			}
+	.blog-pad__img {
+		width: 40px;  
+		height: 40px;
+	}
+@media screen and (min-width: 1866px) and (max-width: 2560px) {
+	.blog-pad__img {
+		width: 50px; 
+		height: 50px; 
+	} 
+	.blog__date{
+    &--inside {
+    bottom: 15px;
+    }
+   }
+	.blogWholeBG {
+			.blogDetail {
+				&__title {
+					font-size: 18px;
+				}
+			&__para {
+					font-size: 14px;
+					line-height: 24px;
+					height: 72px;
+				}	
+			}
+			.authorSection {
+				&__para {
+					font-size: 8px;
+				}
+				&__date {
+					font-size:12px ;
+				}
+				&__title {
+					font-size:13px;
+				}
+			}
+		}  	
+    	}
+@media screen and (min-width: 1366px) and (max-width: 1865px) {
+	.blog-pad__img {
+		width: 50px;
+		height: 50px;  
+	} 
+	.blog__date{
+    &--inside {
+    bottom: 15px;
+    }
+   }
+	.blogWholeBG {
+			.blogDetail {
+				&__title {
+					font-size: 16px;
+				}
+			&__para {
+					font-size: 13px;
+					line-height: 22px;
+					height: 72px;
+				}	
+			}
+			.authorSection {
+				&__para {
+					font-size: 8px;
+				}
+				&__date {
+					font-size:11px ;
+				}
+				&__title {
+					font-size:12px;
+				}
+			}
+		} 
+	} 	
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+	.blog-pad__img {
+		width: 50px;
+		height: 50px;  
+	}
+	.blog__date{
+    &--inside {
+    bottom: 15px;
+    }
+   }
+	.blogWholeBG {
+			.blogDetail {
+				&__title {
+					font-size: 13px;
+				}
+			&__para {
+					font-size: 11px;
+					line-height: 19px;
+					height: 32px;
+				}	
+			}
+			.authorSection {
+				&__para {
+					font-size: 8px;
+				}
+				&__date {
+					font-size:12px ;
+				}
+				&__title {
+					font-size:11px;
+				}
+			}
+		}
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+
+	.selectSection{
+		    position: static;
+    top: 0%;
+	}
+	.blog-pad__img {
+		width: 32px; 
+		height: 32px; 
+	}
+	.blog__date{
+    &--inside {
+    bottom: 5px;
+    }
+   }
+	.rightDiv{
+			position: static; 
+		left: 0%;
+		 top: 0px;
+	}
+	.selectSection{
+		position: static;
+		top:0px;
+	}
+	.blogWholeBG {
+			.blogDetail {
+				&__title {
+					font-size: 12px;
+				}
+			&__para {
+					font-size: 10px;
+					line-height: 18px;
+					height: 52px;
+				}	
+			}
+			
+			.authorSection {
+				&__para {
+					font-size: 7px;
+				}
+				&__date {
+					font-size:7px ;
+				}
+				&__title {
+					font-size:10px;
+				}
+			}
+		} 
+	}	 	
+}	

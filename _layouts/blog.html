@@ -1,0 +1,55 @@
+{% include header.html %}
+<section class="blogBg">
+  {% include common_header.html %}
+  <div class="commonHeight">
+    <div>
+      <img alt="blog_img" src="/assets/img/blog/blog.png" class="commonHeight__img">
+      <h5 class="commonHeight__heading">{{site.data.blog.title}}</h5>
+      <p class="commonHeight__para">{{site.data.blog.description}}</p>
+    </div>
+  </div>
+</section>
+<div class="row blog-row">
+  {% include blog-radio.html %}
+  <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 rightDiv">
+    <div class="row blog_commom-row">
+      {% assign items = site.posts | sort: 'date' %} {% for post in items %} {% for author in site.data.authors %} {% if author.name
+      == post.author_name %} {% assign author_name = author.name %} {% assign author_image = author.image %} {% assign author_title
+      = author.title %} {% break %} {% endif %} {% endfor %}
+
+
+      <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 blog-filter {{post.blog_category}}">
+        <a href="{{post.url}}">
+          <img alt="thumbnail_img" src="{{ post.thumbnail}}" class="blog-filter__img">
+          <div class="blogWholeBG">
+            <div class="blogDetail">
+              <h5 class="blogDetail__title">{{ post.title}}</h5>
+              <div class="blogDetail__border"></div>
+              <p class="blogDetail__para">{{ post.blog_description}}</p>
+            </div>
+            <div class="row blog__pad-row">
+              <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 blog__pad">
+                <div class="blog__pad-img">
+                  <img src="/assets/img/blog/sachin.png" class="blog-pad__img" alt="littlebrahma__blog-author">
+                </div>
+                <div class="authorSection">
+                  <h5 class="authorSection__title">{{ author_name}}</h5>
+                  <p class="authorSection__para">{{ author_title}}</p>
+                </div>
+
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 blog__date">
+                <div class="blog__date--inside">
+                  <img src="/assets/img/blog/clock.svg" alt="littlebrahma__clock">
+                  <span class="authorSection__date">{{ post.date | date: '%d.%m.%Y'}}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% include common_footer.html %} {% include footer.html %}
