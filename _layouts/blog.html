@@ -3,7 +3,7 @@
   {% include common_header.html %}
   <div class="commonHeight">
     <div>
-      <img alt="blog_img" src="/assets/img/blog/blog.png" class="commonHeight__img">
+      <img alt="blog_img" src="{{/assets/img/blog/blog.png | relative_url}}" class="commonHeight__img">
       <h5 class="commonHeight__heading">{{site.data.blog.title}}</h5>
       <p class="commonHeight__para">{{site.data.blog.description}}</p>
     </div>
@@ -19,7 +19,7 @@
 
 
       <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-xs-12 blog-filter {{post.blog_category}}">
-        <a href="{{post.url}}">
+        <a href="{{post.url | relative_url}}">
           <img alt="thumbnail_img" src="{{ post.thumbnail}}" class="blog-filter__img">
           <div class="blogWholeBG">
             <div class="blogDetail">
@@ -30,7 +30,7 @@
             <div class="row blog__pad-row">
               <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 blog__pad">
                 <div class="blog__pad-img">
-                  <img src="/assets/img/blog/sachin.png" class="blog-pad__img" alt="littlebrahma__blog-author">
+                  <img src="{{/assets/img/blog/sachin.png | relative_url}}" class="blog-pad__img" alt="littlebrahma__blog-author">
                 </div>
                 <div class="authorSection">
                   <h5 class="authorSection__title">{{ author_name}}</h5>
@@ -40,7 +40,7 @@
               </div>
               <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 blog__date">
                 <div class="blog__date--inside">
-                  <img src="/assets/img/blog/clock.svg" alt="littlebrahma__clock">
+                  <img src="{{/assets/img/blog/clock.svg | relative_url}}" alt="littlebrahma__clock">
                   <span class="authorSection__date">{{ post.date | date: '%d.%m.%Y'}}</span>
                 </div>
               </div>
