@@ -2,7 +2,7 @@
 date: '2018-07-24 21:29 +0530'
 layout: blog_detail
 author_name: sachin
-published: false
+published: true
 title: An awesome Headline!
 blog_description: Test dasdsa
 blog_category: test
@@ -21,4 +21,3 @@ dsad
 sad
 sa
 d
-
