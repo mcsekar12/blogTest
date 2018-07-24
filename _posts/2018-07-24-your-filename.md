@@ -7,6 +7,7 @@ title: An awesome Headline!
 blog_description: Test dasdsa
 blog_category: test
 blog_highlight: test
+thumbnail: /assets/img/0_lZjc154EDIJG-Ncw.jpg
 ---
 
 
