@@ -8,9 +8,7 @@ blog_description: Test dasdsa
 blog_category: test
 blog_highlight: test
 ---
-asd sad sad asd
 
-asdasd
 
 sadsad![013_Blog_Discription.jpg]({{site.baseurl}}/assets/img/blog/013_Blog_Discription.jpg)
 
