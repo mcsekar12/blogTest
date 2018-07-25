@@ -2,7 +2,7 @@
 date: '2018-07-25 20:06 +0530'
 layout: blog_detail
 author_name: sachin
-published: false
+published: true
 title: Test blog demo
 blog_description: s dsa sa d sad sad
 blog_category: test
